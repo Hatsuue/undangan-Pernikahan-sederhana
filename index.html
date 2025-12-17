@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wedding of Adiatma & Lisa</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- AUDIO -->
+<audio id="music" loop>
+    <source src="audio/music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- COVER -->
+<section class="cover" id="cover">
+    <div class="cover-box">
+        <span class="small-text">The Wedding Of Sabtu, 20 Januari 2025</span>
+        <h1>ANDRI<br>&<br>Lisa</h1>
+        <p class="date">Kepada:
+Yth. Bapak/Ibu/Saudara/i
+Lia</p>
+        <button id="openInvite" class="btn-gold">Buka Undangan</button>
+    </div>
+</section>
+</header>
+
+<!-- CONTENT -->
+<main class="content hidden" id="content">
+
+    <!-- COUPLE -->
+    <section class="card couple">
+        <div class="person">
+            <img src="assets/images.jpeg" class="img-popup">
+            <h3>andri</h3>
+            <p>Ismail bin jannah</p>
+        </div>
+
+        <button class="love-btn" id="loveBtn">💖</button>
+
+        <div class="person">
+            <img src="assets/lisa.jpeg" class="img-popup">
+            <h3>Lisa</h3>
+            <p>Yanto bin burik</p>
+        </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="card">
+        <p class="quote">
+            "Cinta bukan tentang menemukan seseorang yang sempurna,
+            tetapi tentang menerima ketidaksempurnaan dengan sempurna."
+        </p>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="card">
+        <h2>Hari Bahagia</h2>
+        <p>Hari Mingu 20 Januari 2025 | selesai </p>
+        <p id="countdown"></p>
+
+        <a class="btn-gold" target="_blank"
+        href="https://calendar.google.com/calendar/render?action=TEMPLATE
+        &text=Pernikahan+Adiatma+%26+Lisa
+        &dates=20250120T020000Z/20250120T060000Z">
+        📅 Simpan ke Kalender
+        </a>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="card">
+        <h2>Galeri</h2>
+        <div class="gallery">
+            <img src="assets/p.jpeg" class="img-popup">
+            <img src="assets/lisa.jpeg" class="img-popup">
+            <img src="assets/images.jpeg" class="img-popup">
+        </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="card">
+        <h2>Lokasi Acara</h2>
+        <a class="btn-outline" target="_blank"
+        href="https://www.google.com/maps?q=-7.123456,112.123456">
+        📍 Buka Google Maps
+        </a>
+    </section>
+
+    <!-- Donasi -->
+    <section class="card">
+        <h2>Ucapan dan Hadiah</h2>
+        <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami
+        apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu
+        pada acara pernikahan kami. Namun apabila berhalangan hadir,
+        kami juga sangat mengharapkan doa restu dari Bapak/Ibu/Saudara/i.
+        Untuk itu, kami menyediakan kotak donasi digital sebagai
+        pengganti hadiah fisik.</p>
+
+        <a class="btn-gold" target="_blank"
+        href="https://saweria.co/adiatmalisa">
+        💝 Hadiah Digital
+        </a>
+    <!-- WISHES -->
+    <section class="card">
+        <h2>Wishes</h2>
+        <input type="text" id="guestName" placeholder="Nama">
+        <textarea id="guestWish" placeholder="Tulis ucapan..."></textarea>
+        <button class="btn-gold" id="sendWish">Kirim</button>
+        <div id="wishList"></div>
+    </section>
+
+</main>
+
+<!-- MODAL -->
+<div class="modal hidden" id="modal"></div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>

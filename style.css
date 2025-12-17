@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: url("assets/p.jpg") center/cover fixed no-repeat;
+        box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, .1);
+        color: #3b3b3b;
+    }
+
+    /* CARD PAPER */
+    .card {
+        background: #000000;
+        border-radius: 16px;
+        padding: 25px;
+        margin: 20px auto;
+        max-width: 900px;
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, .08),
+            inset 0 0 0 1px rgba(255, 255, 255, .6);
+    }
+
+    /* COVER */
+    .cover {
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)),
+            url("assets/bg.jpg") center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+    }
+
+    .cover-box {
+        background: rgba(255, 255, 255, .12);
+        backdrop-filter: blur(12px);
+        padding: 50px 40px;
+        border-radius: 25px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .cover h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 46px;
+    }
+
+    .cover button {
+        margin-top: 20px;
+        padding: 14px 40px;
+        border: none;
+        border-radius: 40px;
+        background: linear-gradient(135deg, #d6c28f, #b89b5e);
+        cursor: pointer;
+    }
+
+    /* CONTENT */
+    .hidden {
+        display: none
+    }
+
+    .content {
+        padding: 80px 20px
+    }
+
+    /* CARD */
+    .card {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 40px 30px;
+        background: rgba(255, 255, 255, .08);
+        backdrop-filter: blur(10px);
+        border-radius: 25px;
+        text-align: center;
+    }
+
+    /* COUPLE */
+    .couple {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .person img {
+        width: clamp(80px, 16vw, 140px);
+        height: clamp(80px, 16vw, 140px);
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #d6c28f;
+        cursor: pointer;
+        display: block;
+    }
+
+
+    .love-btn {
+        font-size: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1)
+        }
+
+        50% {
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+        }
+
+        100% {
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+        }
+    }
+
+    /* GALLERY */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    /* BUTTON */
+    .btn-gold,
+    .btn-outline {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+    }
+
+    .btn-gold {
+        background: linear-gradient(135deg, #d6c28f, #b89b5e);
+        color: #000;
+    }
+
+    .btn-outline {
+        border: 1px solid #d6c28f;
+        color: #d6c28f;
+    }
+
+    /* INPUT */
+    input,
+    textarea {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 12px;
+        border: none;
+    }
+
+    /* MODAL */
+    .modal {
+        position: fixed;
+        background: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        inset: 0;
+    }
+
+    .hidden {
+        display: none;
+        pointer-events: none;
+    }
+
+    .modal img {
+        max-width: 90%;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+
+    .modal-box {
+        position: relative;
+        background: rgba(251, 144, 144, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+
+    /* ================= SNOW ================= */
+    .snow {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    .snow span {
+        position: absolute;
+        top: -10px;
+        width: 4px;
+        height: 4px;
+        background: rgba(255, 255, 255, .8);
+        border-radius: 50%;
+        filter: blur(0.5px);
+        animation-name: snowFall;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes snowFall {
+        to {
+            transform: translateY(110vh);
+        }
+    }
